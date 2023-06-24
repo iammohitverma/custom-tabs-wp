@@ -1,0 +1,318 @@
+/*
+ Elementor layout width 1320px 
+ Widget Space set 0
+ Breakpoints
+ Mobile Portrait = 575.98
+ Mobile Landscape = 767.98
+ Tablet Portrait = 991.98
+ Tablet Landscape = 1199.98
+ Laptop = 1399.98
+ Widescreen = 1399.98
+ Desktop is set bydefault accordiing your screen width
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0278BF;
+    --secondary: #F1B354;
+    --dark: #111111;
+    --accent: #FDF9F5;
+    --white: #ffffff;
+    --black: #000000;
+    --dark-blue: #041f31;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p, figure, img, span, a, ul) {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.post,
+.page {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+span,
+a {
+    display: inline-block;
+}
+
+a span {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* set default styling for container */
+.elementor-section.elementor-section-boxed>.elementor-container {
+    position: relative;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 12px;
+}
+
+/* set default padding 0 to column inside direct main top section */
+.elementor-section.elementor-top-section>.elementor-container>.elementor-column>.elementor-widget-wrap {
+    padding: 0 !important;
+}
+
+/* set default padding 0 for inner section's container */
+.elementor-inner-section>.elementor-container {
+    padding: 0 !important;
+}
+
+/* set column's default padding 0 from top bottom */
+.elementor-section .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* globally classes */
+.secondary_text_color {
+    color: var(--secondary) !important;
+}
+
+a {
+    color: unset;
+}
+
+/* set default styling for flexbox container */
+.e-con-boxed[data-element_type="container"]>.e-con-inner {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+.tabs_sec {
+    position: relative;
+    padding: 100px 0;
+    background: #ffe185;
+    min-height: 100vh;
+}
+
+.sec_heading {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.sec_heading h2 {
+    position: relative;
+    font: 300 32px / 1.5 "Poppins";
+    color: #111;
+}
+
+.sec_heading p {
+    font: 300 18px / 1.5 "Poppins";
+    color: #111;
+    margin-top: 10px;
+}
+
+.tabs_wrap {
+    position: relative;
+}
+
+.tabs_wrap .tabs_head {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.tabs_wrap .tabs_head .filter-button-group {
+    position: relative;
+}
+
+.tabs_wrap .tabs_head .filter-button-group button {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    background: #2196F3;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.tabs_wrap .tabs_head .filter-button-group button:hover,
+.tabs_wrap .tabs_head .filter-button-group button.is-checked {
+    background: #000;
+}
+
+.tabs_wrap .tabs_head .filter-button-group button.is-checked {
+    pointer-events: none;
+}
+
+.tabs_wrap .tabs_body {
+    position: relative;
+}
+
+.tabs_wrap .tabs_body .grid {
+    position: relative;
+    margin: 0 -12px;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item {
+    position: relative;
+    width: calc(100% / 4);
+    max-width: 100%;
+    padding: 12px;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card {
+    position: relative;
+    border: none;
+    background-color: #fff;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card {
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card .img_box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card .img_box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card .card-body {
+    padding: 20px;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card .card-body .card-title {
+    position: relative;
+    font: 400 18px / 1.3 "Poppins";
+    color: #111;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card .card-body p {
+    font: 300 16px / 1.7 "Poppins";
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.tabs_wrap .tabs_body .grid .grid-item .card .card-body .btn {
+    margin-top: 20px;
+}
+
+.progress_wrapper {
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.post-loader,
+.no-post-message {
+    display: none;
+}
+
+.no-post-message p {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+@media(max-width: 1199.98px) {
+    .tabs_wrap .tabs_body .grid .grid-item {
+        width: calc(100% / 3);
+    }
+}
+
+@media(max-width: 992.98px) {
+    .tabs_wrap .tabs_body .grid .grid-item {
+        width: calc(100% / 2);
+    }
+}
+
+@media(max-width: 767.98px) {
+    .tabs_wrap .tabs_body .grid .grid-item {
+        width: calc(100% / 1);
+    }
+}
+
+@media (min-width: 575.98px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 540px !important;
+    }
+
+    .e-con-boxed[data-element_type="container"]>.e-con-inner {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 767.98px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 720px !important;
+    }
+
+    .e-con-boxed[data-element_type="container"]>.e-con-inner {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 960px !important;
+    }
+
+    .e-con-boxed[data-element_type="container"]>.e-con-inner {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1199.98px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1140px !important;
+    }
+
+    .e-con-boxed[data-element_type="container"]>.e-con-inner {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1399.98px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1320px !important;
+    }
+
+    .e-con-boxed[data-element_type="container"]>.e-con-inner {
+        max-width: 1320px;
+    }
+}
