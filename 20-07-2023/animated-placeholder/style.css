@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    padding: 100px 0;
+}
+
+.card_placeholders_mv {
+    position: relative;
+    animation: placeholderAnim 0.75s linear infinite alternate;
+    overflow: hidden;
+}
+
+@keyframes placeholderAnim {
+    0% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.card_placeholders_mv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 400%;
+    background: #fff;
+    transform: rotate(45deg) translateY(-50%);
+    z-index: 1;
+    animation: placeholderLayerAnim 3s linear infinite alternate;
+}
+
+@keyframes placeholderLayerAnim {
+    0% {
+        opacity: 0.25;
+        left: -300%;
+        transform: rotate(45deg) translateY(-50%);
+    }
+
+    100% {
+        opacity: 0.5;
+        left: 300%;
+        transform: rotate(45deg) translateY(-50%);
+    }
+}
+
+.card_placeholders_mv .placeholder_card {
+    position: relative;
+    width: 100%;
+    background: rgb(221, 221, 221);
+    border: none;
+    border-radius: 0;
+    height: 340px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 1399.98px) {
+    .card_placeholders_mv .placeholder_card {
+        height: 280px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .card_placeholders_mv::before {
+        animation: placeholderLayerAnim 2s linear infinite alternate;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card_placeholders_mv::before {
+        /* background-color: red; */
+        animation: placeholderLayerAnim 2.5s linear infinite alternate;
+    }
+
+    @keyframes placeholderLayerAnim {
+        0% {
+            opacity: 0.25;
+            left: -1000%;
+            transform: rotate(45deg) translateY(0%);
+        }
+
+        100% {
+            opacity: 0.5;
+            left: 500%;
+            transform: rotate(45deg) translateY(-100%);
+        }
+    }
+}

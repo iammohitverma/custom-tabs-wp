@@ -37,6 +37,9 @@ jQuery(document).ready(function () {
 
     if (tabBtns) {
         $(".tab_button").click(function () {
+            $(".latest_post_tabs_mv .tabs_body .body.row").html("");
+            $(".latest_post_tabs_mv .tabs_body .not_found").hide();
+            $(".placeholderLoader").show();
             $(this).siblings().removeClass("is-checked");
             $(this).addClass("is-checked");
             filterValue = $(this).attr("data-filter");
@@ -60,8 +63,8 @@ jQuery(document).ready(function () {
     // on category change "click" run function ajaxRunOnClickFun defined
     /********************************************************************/
     function ajaxRunOnClickFun(currActive) {
-        $(".latest_post_tabs_mv .loader").show();
-        $(".latest_post_tabs_mv .loader").css("display", "flex");
+        // $(".latest_post_tabs_mv .loader").show();
+        // $(".latest_post_tabs_mv .loader").css("display", "flex");
 
         $(".mapscripts").html('');
         postOffset = 0; //after click we want all posts from 0 offset at initial state
@@ -83,14 +86,17 @@ jQuery(document).ready(function () {
                 if (res != 0) {
                     console.log("Found data");
                     console.log(res);
-                    $(".latest_post_tabs_mv .tabs_body .row").html("");
-                    $(".latest_post_tabs_mv .tabs_body .row").append(res.centers);
+                    $(".latest_post_tabs_mv .tabs_body .body.row").html("");
+                    $(".latest_post_tabs_mv .tabs_body .body.row").append(res.centers);
                     $(".map-wrapper").html(res.map);
                     $(".mapscripts").html(res.mapscript);
-                    $(".latest_post_tabs_mv .loader").hide();
+                    // $(".latest_post_tabs_mv .loader").hide();
+                    $(".placeholderLoader").hide();
                 } else {
                     console.log("No data");
-                    $(".latest_post_tabs_mv .loader").hide();
+                    // $(".latest_post_tabs_mv .loader").hide();
+                    $(".placeholderLoader").hide();
+                    $(".latest_post_tabs_mv .tabs_body .not_found").show();
                 }
             },
         });
