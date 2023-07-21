@@ -11,7 +11,7 @@ section {
 
 .card_placeholders_mv {
     position: relative;
-    animation: placeholderAnim 0.75s linear infinite alternate;
+    animation: placeholderAnim 0.4s linear infinite alternate;
     overflow: hidden;
 }
 
@@ -35,7 +35,7 @@ section {
     background: #fff;
     transform: rotate(45deg) translateY(-50%);
     z-index: 1;
-    animation: placeholderLayerAnim 3s linear infinite alternate;
+    animation: placeholderLayerAnim 2s ease-in-out infinite alternate;
 }
 
 @keyframes placeholderLayerAnim {
@@ -51,6 +51,7 @@ section {
         transform: rotate(45deg) translateY(-50%);
     }
 }
+
 
 .card_placeholders_mv .placeholder_card {
     position: relative;
