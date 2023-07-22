@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background: url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 500px;
+        }
+
+        .block {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            flex-grow: 1;
+            display: block;
+            animation: animBlock calc(var(--i) + 1s) ease-in-out forwards;
+            animation-delay: calc(var(--i));
+            background: #fff;
+            opacity: 1;
+        }
+
+        @keyframes animBlock {
+            0% {
+                opacity: 1;
+                transform: translateZ(0px) rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateZ(500px) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="banner">
+        </div>
+    </section>
+
+    <script>
+        let banner = document.querySelector(".banner");
+        for (let i = 0; i < 1000; i++) {
+            let block = document.createElement("div");
+            block.classList.add("block");
+            let x = Math.random() + 's';
+            block.style.setProperty("--i", x);
+            banner.appendChild(block);
+        }
+    </script>
+</body>
+
+</html>

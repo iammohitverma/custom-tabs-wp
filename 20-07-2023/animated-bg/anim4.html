@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            display: flex;
+        }
+
+        .banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            transform-style: preserve-3d;
+            perspective: 500px;
+        }
+
+        .banner .block {
+            position: relative;
+            display: block;
+            width: 5vw;
+            height: 5vh;
+            animation: animate 2s ease-in-out forwards;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateZ(2000px);
+                background: url(https://images.unsplash.com/photo-1587387119725-9d6bac0f22fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            100% {
+                transform: translateZ(0px);
+                background: url(https://images.unsplash.com/photo-1587387119725-9d6bac0f22fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="banner">
+            <div class="block"></div>
+        </div>
+    </section>
+
+
+    <script>
+        let banner = document.getElementsByClassName("banner")[0];
+        console.log(banner);
+        let block = document.getElementsByClassName("block");
+        console.log(block);
+        for (let i = 0; i < 400; i++) {
+            banner.innerHTML += '<div class="block"></div>';
+            let duration = Math.random() * 5;
+            block[i].style.animationDuration = 1 + duration + 's';
+            block[i].style.animationDelay = 1 + duration + 's';
+
+        }
+    </script>
+
+</body>
+
+</html>
