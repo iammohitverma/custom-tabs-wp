@@ -7,23 +7,28 @@
     );
 
     $accordion_item_id = $args['accordion_item_id'];
-    $singlePost = get_post( $accordion_item_id ); 
-    $title = $singlePost->post_title;
-?>
 
+    $the_query = new WP_Query( array(
+        'p' => $accordion_item_id,
+        'post_type' => 'accordion',
+    ) );
 
-<h2><?php echo $title; ?></h2>
+    while ( $the_query->have_posts() ) :
+        $the_query->the_post();
+        $title = get_the_title();
+    ?>
+
+<h1><?php echo $title;?></h1>
 
 <div class="custom_accordion_wrap">
     <div class="inner">
         <ul>
             <?php
             $accordion_repeater_field_name  = 'accordions';
-            $accordionData = get_field( $accordion_repeater_field_name, $accordion_item_id );
-            if($accordionData){
-                foreach ($accordionData as $data) {
-                    $accordionItemTitle = $data['title'];
-                    $accordionItemDesc = $data['content'];
+            if( have_rows($accordion_repeater_field_name) ): ?>
+                <?php while( have_rows($accordion_repeater_field_name) ): the_row(); 
+                    $accordionItemTitle = get_sub_field('title');
+                    $accordionItemDesc = get_sub_field('content');
                     ?>
                     <li class="accordion_item">
                         <div class="accordion_head">
@@ -36,9 +41,20 @@
                             </div>
                         </div>
                     </li>
-                    <?php
-                }  
-            } ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </ul>    
     </div>
 </div>
+
+<?php
+    // Show Posts ...
+    endwhile;
+
+    /* Restore original Post Data 
+    * NB: Because we are using new WP_Query we aren't stomping on the 
+    * original $wp_query and it does not need to be reset.
+    */
+    wp_reset_postdata();
+?>
+
