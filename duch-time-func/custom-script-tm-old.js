@@ -23,6 +23,8 @@ jQuery(document).ready(function () {
     }
   });
 
+
+
   function setDateFun(parentSelector, y, m, d) {
     const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -105,6 +107,7 @@ jQuery(document).ready(function () {
       setDateMainFun(currTargetVal);
     }
     function setDateMainFun(currTargetVal) {
+      debugger
       let currDate = parseInt(currTargetVal.substring(8, 10));
       let currMonth = parseInt(currTargetVal.substring(5, 7));
       let currYear = parseInt(currTargetVal.substring(0, 4));
@@ -123,86 +126,54 @@ jQuery(document).ready(function () {
 
   // checkbox check only one
   function checkBoxInit(parentSelector) {
-    // set previous check
-    let prevCheck = jQuery(parentSelector).attr("data-checkid");
-    if (prevCheck) {
-      jQuery(`#${prevCheck}`).prop('checked', true);
-    }
-    // remove all check and select only one check like radio
     let checkBoxes = jQuery(parentSelector).find(".delivery_estimate_box [type='checkbox']");
+    console.log(parentSelector);
+    console.log(checkBoxes);
     jQuery(checkBoxes).change(function () {
       jQuery(checkBoxes).prop("checked", false);
       jQuery(this).prop("checked", true);
-      let currId = jQuery(this).attr("id");
-      jQuery(parentSelector).attr("data-checkid", currId);
     });
   }
 
   // quick-product__btn click
-  setTimeout(() => {
-    jQuery("[data-section-type='collection-template'] .quick-product__btn").each(function () {
-      $(this).click(function () {
-        openModalFun();
-      });
-    });
-  }, 2000);
-  function openModalFun() {
+  jQuery(".quick-product__btn").click(function (event) {
     setTimeout(() => {
       let allModals = jQuery(".modal");
       if (allModals.hasClass("modal--is-active")) {
         let currActiveModal = jQuery(".modal--is-active");
-        let currActiveModalMeta = jQuery(currActiveModal).find(".product-single__meta");
-        setEstBoxHTML(currActiveModalMeta);
+        let currParent = jQuery(currActiveModal).find(".product-single__meta");
+        let currEstBox = jQuery(currActiveModal).find(".delivery_estimate_box");
+        let currEstBoxInner = jQuery(currEstBox).find(".delivery_estimate_box_inner");
+        let currEstBoxTextWrap = jQuery(currEstBoxInner).find(".text_wrap");
+        let currEstBoxTextWrapHtml = `<div class="inner">
+            <p>
+              <input id="standard-fee" type="checkbox" value="no">
+              <span class="custom_check_tm"></span>
+              <label class="custom_check_tm_label" for="standard-fee">
+                  <span> Standard Delivery.
+                  </span>Order Today! Estimated. Ship Date: 
+                  <b id="standardMin"></b> - <b id="standardMax"></b>
+              </label>
+            </p><p>
+              <input id="rush-fee" type="checkbox" name="attributes[rush-fee]" value="yes">
+              <span class="custom_check_tm"></span>
+              <label class="custom_check_tm_label" for="rush-fee">
+                  <span>Guaranteed Rush Priority Delivery $60 fee</span>
+                  Order Today! Estimated Ship Date:
+                  <b id="rushMin"></b> - <b id="rushMax"></b>
+              </label>
+          </p>
+        </div>`;
+
+        let allEstBoxes = jQuery(".modal .delivery_estimate_box");
+        if (allEstBoxes) {
+          $(".delivery_estimate_box .text_wrap .inner").each(function () {
+            jQuery(this).remove();
+          });
+        }
+        $(currEstBoxTextWrap).html(currEstBoxTextWrapHtml);
+        dateEventInit(currParent);
       }
-    }, 2000);
-  }
-
-  // Set Estimate Box HTML
-  function setEstBoxHTML(currParent) {
-    let currEstBox = jQuery(currParent).find(".delivery_estimate_box");
-    let currEstBoxInner = jQuery(currEstBox).find(".delivery_estimate_box_inner");
-    let currEstBoxTextWrap = jQuery(currEstBoxInner).find(".text_wrap");
-    let currEstBoxTextWrapHtml = `<div class="inner">
-        <p>
-          <input id="standard-fee" type="checkbox" value="no">
-          <span class="custom_check_tm"></span>
-          <label class="custom_check_tm_label" for="standard-fee">
-              <span> Standard Delivery.
-              </span>Order Today! Estimated. Ship Date: 
-              <b id="standardMin"></b> - <b id="standardMax"></b>
-          </label>
-        </p><p>
-          <input id="rush-fee" type="checkbox" name="attributes[rush-fee]" value="yes">
-          <span class="custom_check_tm"></span>
-          <label class="custom_check_tm_label" for="rush-fee">
-              <span>Guaranteed Rush Priority Delivery $60 fee</span>
-              Order Today! Estimated Ship Date:
-              <b id="rushMin"></b> - <b id="rushMax"></b>
-          </label>
-      </p>
-    </div>`;
-
-    let allEstBoxes = jQuery(".delivery_estimate_box");
-    if (allEstBoxes) {
-      $(".delivery_estimate_box .text_wrap .inner").each(function () {
-        jQuery(this).remove();
-      });
-    }
-    $(currEstBoxTextWrap).html(currEstBoxTextWrapHtml);
-    dateEventInit(currParent);
-    checkBoxInit(currParent);
-  }
-
-  // modal close button
-  setTimeout(() => {
-    jQuery("[data-section-type='collection-template'] .modal__close ").each(function () {
-      $(this).click(function () {
-        closeModalFun();
-      });
-    });
-  }, 2000);
-  function closeModalFun() {
-    let singleProductWrap = jQuery("#shopify-section-product-template").find(".product-single__meta");;
-    setEstBoxHTML(singleProductWrap);
-  }
+    }, 1000);
+  });
 });
