@@ -1,0 +1,218 @@
+/* .show-cart-for-mobile {
+    z-index: 9;
+} */
+
+.customized_header {
+    position: relative;
+    z-index: 9999;
+    background: #fff;
+}
+
+.customized_header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.customized_header .navigation_wrap_mv {
+    position: relative;
+}
+
+.menu_toggle {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.menu_toggle i {
+    position: absolute;
+    font-size: 32px;
+    color: #343a40;
+}
+
+.menu_toggle i.hamburger {
+    display: block;
+}
+
+.menu_toggle i.close {
+    display: none;
+}
+
+.customized_header.active .menu_toggle i.hamburger {
+    display: none;
+}
+
+.customized_header.active .menu_toggle i.close {
+    display: block;
+}
+
+.customized_header .navigation_wrap_mv nav {
+    position: relative;
+}
+
+.customized_header .navigation_wrap_mv nav>ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.customized_header .navigation_wrap_mv nav>ul>li {
+    margin-left: 20px;
+}
+
+.customized_header .navigation_wrap_mv nav ul li {
+    position: relative;
+}
+
+.customized_header .navigation_wrap_mv nav ul li .a-Wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.customized_header .navigation_wrap_mv nav ul li .a-Wrap a {
+    position: relative;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .5);
+    flex-grow: 1;
+    text-align: left;
+}
+
+.customized_header .navigation_wrap_mv nav ul li .a-Wrap .subMenuAngle {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.customized_header .navigation_wrap_mv nav ul li .a-Wrap .subMenuAngle i {
+    transition: 0.5s;
+}
+
+.customized_header .navigation_wrap_mv nav ul li .a-Wrap .subMenuAngle.active i {
+    transform: rotate(180deg);
+}
+
+.customized_header .navigation_wrap_mv nav ul li .sub-menu {
+    position: absolute;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: none;
+}
+
+.customized_header .navigation_wrap_mv nav>ul>li>.sub-menu {
+    top: 100%;
+    left: 0;
+}
+
+.customized_header .navigation_wrap_mv nav ul li:hover>.sub-menu {
+    display: block;
+}
+
+.customized_header .navigation_wrap_mv nav>ul>li>.sub-menu .sub-menu {
+    top: 0%;
+    left: 100%;
+}
+
+.customized_header .navigation_wrap_mv nav ul li .sub-menu .a-Wrap a {
+    padding: 7px 10px;
+}
+
+.customized_header .cart_icon_desktop a {
+    margin-left: 20px;
+    margin-right: unset !important;
+}
+
+/* make it responsive */
+@media (max-width: 991.98px) {
+    .customized_header .top-nav {
+        margin-top: 20px;
+    }
+
+    .customized_header .navigation_wrap_mv nav>ul>li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .customized_header {
+        display: flex !important;
+        margin-bottom: 20px !important;
+        justify-content: space-between !important;
+    }
+
+    .customized_header .top-nav {
+        margin-top: 0px;
+    }
+
+    .menu_toggle {
+        display: inline-flex;
+    }
+
+    .customized_header .navigation-p-two {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .customized_header .navigation_wrap_mv {
+        display: none;
+        width: 100%;
+    }
+
+    .customized_header.active .navigation_wrap_mv {
+        display: block;
+    }
+
+    .customized_header .navigation_wrap_mv nav>ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .customized_header .navigation_wrap_mv nav>ul>li {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .customized_header .navigation_wrap_mv nav ul li .a-Wrap a {
+        padding: 7px 0;
+    }
+
+    .customized_header .navigation_wrap_mv nav ul li .sub-menu {
+        position: relative;
+        width: 100%;
+        top: initial;
+        left: initial;
+    }
+
+    .customized_header .navigation_wrap_mv nav>ul>li>.sub-menu .sub-menu {
+        top: initial;
+        left: initial;
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .customized_header .navigation_wrap_mv nav ul li:hover>.sub-menu {
+        display: none;
+    }
+
+    .customized_header .navigation_wrap_mv nav ul li .a-Wrap .subMenuAngle {
+        width: 35px;
+        height: 35px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        pointer-events: all;
+    }
+}
