@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box_wrap {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            /* min-height: 100vh; */
+            gap: 20px;
+        }
+
+        .box {
+            position: relative;
+            flex-basis: 320px;
+            flex-shrink: 1;
+            flex-grow: 1;
+            height: 200px;
+        }
+
+        .box:nth-child(3n+1) {
+            background-color: #fff45d;
+        }
+
+        .box:nth-child(3n+2) {
+            background-color: #5dffd7;
+        }
+
+        .box:nth-child(3n+3) {
+            background-color: #5dff78;
+        }
+
+        .horizontal_scroll_wrap {
+            position: relative;
+            width: 400px;
+            height: 100px;
+            margin: 20px 0;
+        }
+
+        .horizontal_scroll {
+            position: absolute;
+            width: 100px;
+            max-height: 400px;
+            /* background: red; */
+            overflow-x: hidden;
+            overflow-y: auto;
+            transform: rotate(90deg) rotateX(180deg) translate(100px, -100px);
+            transform-origin: top right;
+            scroll-behavior: smooth;
+        }
+
+        .horizontal_scroll ul {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .horizontal_scroll ul li {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: yellow;
+            /* border: 5px solid red; */
+            transform: rotate(90deg) rotateX(180deg);
+        }
+
+        .horizontal_scroll::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+
+        .horizontal_scroll::-webkit-scrollbar-thumb {
+            background-color: #000000;
+        }
+
+        .horizontal_scroll::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box_wrap">
+        <div class="box">
+            1
+        </div>
+        <div class="box">
+            2
+        </div>
+        <div class="box">
+            3
+        </div>
+        <div class="box">
+            4
+        </div>
+        <div class="box">
+            5
+        </div>
+        <div class="box">
+            6
+        </div>
+    </div>
+
+    <div class="horizontal_scroll_wrap">
+        <div class="horizontal_scroll">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="prevBtn">Prev</button>
+    <button class="nextBtn">Next</button>
+
+    <script>
+        let prevBtn = document.querySelector(".prevBtn");
+        let nextBtn = document.querySelector(".nextBtn");
+        let horizontal_scroll = document.querySelector(".horizontal_scroll");
+        nextBtn.onclick = (e) => {
+            horizontal_scroll.scrollBy(100, 100);
+        }
+        prevBtn.onclick = (e) => {
+            horizontal_scroll.scrollBy(-100, -100);
+        }
+    </script>
+
+</body>
+
+</html>
