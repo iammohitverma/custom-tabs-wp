@@ -54,10 +54,21 @@ function create_team_cpt() {
 	);
 	register_post_type( 'team', $args );
 
-    register_taxonomy( 'mvcategory', 'team', array(
-		'label'        => __( 'Team Categories', 'elementortest' ),
-		'rewrite'      => array( 'slug' => 'mvcategory' ),
-		'hierarchical' => true,
-	) );
+    // register_taxonomy( 'mvcategory', 'team', array(
+	// 	'label'        => __( 'Team Categories', 'elementortest' ),
+	// 	'rewrite'      => array( 'slug' => 'mvcategory' ),
+	// 	'hierarchical' => true,
+	// ) );
+
+	 // create a new taxonomy
+	 register_taxonomy(
+        'products-categories', 
+        'products', //post type
+        array(
+            'label' => __( 'Product Categories' ),
+            'rewrite' => array( 'slug' => 'products-categories' ), //cat taxonomy slug
+            'hierarchical' => true,
+        )
+    );
 }
 add_action( 'init', 'create_team_cpt', 0 );
