@@ -84,6 +84,123 @@
                 //     echo '<li><a href="' . get_term_link( $child, $taxonomy ) . '">' . $term->name . '</a></li>';
                 // }
                 // echo '</ul>';
+
+
+
+
+
+
+
+
+
+
+
+                /***********************/
+                // for archive post start
+                /***********************/
+                $taxonomy_name = 'mvcategory';
+                $obj = get_queried_object();
+                echo "<pre>";
+                print_r($obj);
+                echo "</pre>";
+
+                if($obj->parent == 0){
+                    $term_id =  $obj->term_id;
+                }else {
+                    $term_id =  $obj->parent;
+                }
+
+                // get cat without childrens  (only direct categories)
+                $taxonomies = get_terms(array(
+                    'taxonomy' => $taxonomy_name,
+                    'hide_empty' => false,
+                    'parent' => $term_id,
+                ));
+                echo $term_id;
+                echo "<pre>";
+                print_r($taxonomies);
+                echo "</pre>";
+                foreach ( $taxonomies as $child ) { ?>
+                <a class="tab_button' <?php if($obj->name == $child->name){echo 'is-checked';} ?>" href="/products-categories/<?php echo $child->slug; ?>"><?php echo $child->name; ?></a>
+                <?php }
+
+
+
+                // get cat with nested childrens  (with nested childrens categories) 
+                // $termchildren = get_term_children( $term_id, $taxonomy_name );
+
+                // echo '<ul>';
+                // foreach ( $termchildren as $child ) {
+                    // 	$term = get_term_by( 'id', $child, $taxonomy_name ); ID Base
+                // 	echo '<li><a href="' . get_term_link( $child, $taxonomy_name ) . '">' . $term->name . '</a></li>';
+                // }
+                // echo '</ul>';
+                
+                /***********************/
+                // for archive post end
+                /***********************/
+
+
+
+
+
+
+
+                /***********************/
+                // for single post start
+                /***********************/
+                $taxonomy_name = 'mvcategory'; //this is custom taxonomy for products cpt
+                $post_id =  get_the_ID();
+                $category = get_the_terms($post_id, $taxonomy_name);
+                $specific_term_id;
+                $currCatName;
+                foreach ($category as $cat) {
+                    if ($cat->parent) {
+                        $specific_term_id = $cat->parent;
+                        $currCatName = $cat->name;
+                    }
+                }
+                if($specific_term_id == 0){ //if selected only parent cat,, parent cat has 0 val 
+                    $specific_term_id = $cat->term_id;
+                }
+                echo "<pre>";
+                print_r($category);
+                echo "</pre>";
+                echo $specific_term_id;
+                
+
+                $taxonomies = get_terms(array(
+                    'taxonomy' => $taxonomy_name,   
+                    'hide_empty' => false,
+                    'parent' => $specific_term_id,
+                ));
+                echo "<pre>";
+                print_r( $taxonomies );
+                echo "</pre>";
+
+                foreach ( $taxonomies as $child ) { ?>
+                    <a class="tab_button' <?php if($obj->name == $child->name){echo 'is-checked';} ?>" href="/products-categories/<?php echo $child->slug; ?>"><?php echo $child->name; ?></a>
+                <?php }
+
+
+   
+                // get cat with nested childrens  (with nested childrens categories) 
+                // $termchildren = get_term_children( $specific_term_id, $taxonomy_name );//ID base 
+                // echo "<pre>";
+                // print_r( $termchildren );
+                // echo "</pre>";
+
+                // echo '<ul>';
+                // foreach ( $termchildren as $child ) {
+                //     	$term = get_term_by( 'id', $child, $taxonomy_name ); id base
+                // 	echo '<li><a href="' . get_term_link( $child, $taxonomy_name ) . '">' . $term->name . '</a></li>';
+                // }
+                // echo '</ul>';
+                
+                /***********************/
+                // for single post end
+                /***********************/
+
             ?>
 
         </div>
