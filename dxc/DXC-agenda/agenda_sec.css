@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.agenda_sec {
+    position: relative;
+    background: #ECEDF1;
+}
+
+.agenda_sec .tab_head {
+    position: relative;
+    background: #fff;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.agenda_sec .tab_head button {
+    position: relative;
+    padding: 20px;
+    border: none;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    flex-grow: 1;
+    transition: 0.5s ease-in-out;
+}
+
+/* .agenda_sec .tab_head button.active {
+    background: #5F249F;
+    color: #fff;
+} */
+
+.agenda_sec .tab_head button.active {
+    color: #5F249F;
+}
+
+.agenda_sec .tab_head button .day {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.agenda_sec .tab_head button .date {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.agenda_sec .tab_content_wrap {
+    position: relative;
+}
+
+.agenda_sec .tab_content {
+    position: relative;
+    display: none;
+}
+
+.agenda_sec .tab_content.active {
+    display: block;
+}
+
+.agenda_sec .tab_content .accordion_wrap {
+    position: relative;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item {
+    position: relative;
+    background: #fff;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item.disabled {
+    pointer-events: none;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item:not(:last-of-type) {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head {
+    position: relative;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head button {
+    position: relative;
+    padding: 20px;
+    padding-right: 40px;
+    background: transparent;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head button::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 20px;
+    transform: rotate(45deg);
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-color: #AAAAAA;
+    transition: 0.5s;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item.disabled .accordion_head button::before {
+    display: none;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item.active .accordion_head button::before {
+    transform: rotate(225deg);
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head button .time {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    color: #1D2833;
+    margin-right: 40px;
+    min-width: 170px;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head button .text {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    color: #888888;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_content {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_content .inner {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item.active .accordion_content {
+    height: var(--dynHeight);
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_content p {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec h3 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1D2833;
+    margin-right: 40px;
+    min-width: 170px;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item:not(:last-of-type) {
+    margin-right: 40px;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item:last-of-type {
+    flex-grow: 3;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item .img_box {
+    position: relative;
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item .img_box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item .text_wrap {
+    position: relative;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item .text_wrap h4 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1D2833;
+}
+
+.agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item .text_wrap h5 {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: #777777;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1023.98px) {
+    .agenda_sec .tab_head button {
+        padding: 15px;
+    }
+
+    .agenda_sec .tab_head button .date {
+        font-size: 14px;
+    }
+
+    .agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head button {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head button .time {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_head button .text {
+        font-size: 14px;
+    }
+
+    .agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_content .inner {
+        padding: 15px;
+        padding-top: 0;
+    }
+
+    .agenda_sec .tab_content .accordion_wrap .accordion_item .accordion_content p {
+        font-size: 14px;
+    }
+
+    .agenda_sec .tab_content .accordion_speakers_sec {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap {
+        flex-direction: column;
+    }
+
+    .agenda_sec .tab_content .accordion_speakers_sec h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+
+    .agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item:not(:last-of-type) {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item .text_wrap h4 {
+        font-size: 14px;
+    }
+
+    .agenda_sec .tab_content .accordion_speakers_sec .accordion_speakers_wrap .speaker_item .text_wrap h5 {
+        font-size: 14px;
+    }
+}
