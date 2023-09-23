@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font_tarzana_narrow;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+// section {
+//     overflow: hidden;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+:is(h1, h2, h3, h4, h5, h6),
+:is(h1, h2, h3, h4, h5, h6) :is(span) {
+    font-family: $font_nelipotvp1;
+}
+
+span,
+a {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img,
+video {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+:root {
+    --containerWidth: 1320px;
+
+    @media(max-width: 1399.98px) {
+        --containerWidth: 1140px;
+    }
+
+    @media(max-width: 1199.98px) {
+        --containerWidth: 960px;
+    }
+
+    @media(max-width: 991.98px) {
+        --containerWidth: 720px;
+    }
+
+    @media(max-width: 767.98px) {
+        --containerWidth: 540px;
+    }
+
+    @media(max-width: 575.98px) {
+        --containerWidth: 100%;
+    }
+}
+
+.one_side_container {
+    position: relative;
+    width: calc(100% - (100% - var(--containerWidth)) / 2);
+    max-width: 100%;
+    padding: 0 12px;
+}
+
+.ml_auto {
+    margin-left: auto;
+}
+
+.pt_60 {
+    @extend %pt_60;
+}
+
+.pb_60 {
+    @extend %pb_60;
+}
+
+.pt_100 {
+    @extend %pt_100;
+}
+
+.pb_100 {
+    @extend %pb_100;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(180deg, $gradient_c1, $gradient_c2);
+
+    &.home header .logo {
+        opacity: 0;
+    }
+}
+
+
+.cmn_flower_shape_v1 {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 300px;
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/flower_shape_v1.png") no-repeat center left/contain;
+        pointer-events: none;
+
+        @media(max-width: 1749.98px) {
+            width: 15%;
+        }
+    }
+
+    &.bottom_left::before {
+        top: 100%;
+        left: 0;
+        background-position-x: left;
+        transform: translateY(-80%);
+    }
+}
+
+.cmn_flower_shape_v2 {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 300px;
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/flower_shape_v2.png") no-repeat center left/contain;
+        pointer-events: none;
+
+        @media(max-width: 1749.98px) {
+            width: 15%;
+        }
+    }
+
+    &.top_right::before {
+        top: 0%;
+        right: 0;
+        background-position-x: right;
+    }
+}
+
+.cmn_bot_shape {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 200px;
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/bot_v1.png") no-repeat center left/contain;
+        pointer-events: none;
+        transform: translateY(-50%);
+
+
+        @media(max-width: 1599.98px) {
+            width: 5%;
+        }
+
+        @media(max-width: 991.98px) {
+            width: 10%;
+        }
+    }
+
+    &.btm_left::before {
+        left: 50px;
+
+        @media(max-width: 767.98px) {
+            left: 10px;
+        }
+    }
+}
+
+.shape_btn,
+.added_to_cart {
+    position: relative;
+    padding: 10px 30px;
+    @extend %fs_24;
+    color: $forestGreen;
+    transition: 0.5s;
+    margin-top: 20px;
+
+    @media(max-width: 767.98px) {
+        margin-top: 0;
+    }
+
+    @media(max-width: 575.98px) {
+        padding: 10px 20px;
+    }
+
+    &.pink {
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/btn_pink.png") no-repeat center / contain;
+    }
+
+    &.lightGreen {
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/btn_green.png") no-repeat center / contain;
+    }
+
+    &.sky {
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/btn_sky.png") no-repeat center / contain;
+    }
+
+    &.yellow {
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/btn_yellow.png") no-repeat center / contain;
+    }
+
+    &.oliveGreen {
+        background: url("/wp-content/themes/CavesRoadOlives/assets/images/btn_green_olive.png") no-repeat center / contain;
+    }
+
+    &.oliveGreen_with_arrow {
+        padding-right: 70px;
+        background: url("/wp-content/uploads/2023/09/arrow_right.png") no-repeat calc(100% - 30px) center/30px, url("/wp-content/themes/CavesRoadOlives/assets/images/btn_green_olive.png") no-repeat center/contain;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+
+        @media(max-width: 767.98px) {
+            transform: translateY(0px);
+        }
+    }
+
+}
+
+.cmn_sec_heading {
+    position: relative;
+    @extend %fs_54;
+    font-weight: 500;
+    color: $OliveGreen;
+    margin-bottom: 20px;
+
+    @media(max-width: 767.98px) {
+        margin-bottom: 10px;
+    }
+
+    span {
+        color: $forestGreen;
+    }
+}
+
+
+.cmn_sec_para {
+    @extend %fs_24;
+    line-height: 1.5;
+    color: $paraText;
+    margin-bottom: 20px;
+}
+
+.cmn_fs_110 {
+    position: relative;
+    @extend %fs_110;
+    color: $OliveGreen;
+    text-transform: uppercase;
+
+    span {
+        color: $forestGreen;
+    }
+}
+
+.cmn_fs_140 {
+    position: relative;
+    @extend %fs_140;
+    color: $forestGreen;
+    margin-bottom: 10px;
+}

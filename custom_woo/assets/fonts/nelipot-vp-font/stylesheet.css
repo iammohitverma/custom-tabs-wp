@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'NelipotVP Style 1';
+    src: url('NelipotVPStyle1.woff2') format('woff2'),
+        url('NelipotVPStyle1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NelipotVP Style 2';
+    src: url('NelipotVPStyle2.woff2') format('woff2'),
+        url('NelipotVPStyle2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

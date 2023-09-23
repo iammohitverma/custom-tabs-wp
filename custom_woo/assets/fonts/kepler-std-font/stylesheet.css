@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-BoldScnDisp.woff2') format('woff2'),
+        url('KeplerStd-BoldScnDisp.woff') format('woff'),
+        url('KeplerStd-BoldScnDisp.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-BoldScnItDisp.woff2') format('woff2'),
+        url('KeplerStd-BoldScnItDisp.woff') format('woff'),
+        url('KeplerStd-BoldScnItDisp.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

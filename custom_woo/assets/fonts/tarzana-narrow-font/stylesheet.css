@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'TarzanaNarrow';
+    src: url('TarzanaNarrowItalic.woff2') format('woff2'),
+        url('TarzanaNarrowItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaWide';
+    src: url('TarzanaWide.woff2') format('woff2'),
+        url('TarzanaWide.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaNarrow';
+    src: url('TarzanaNarrow.woff2') format('woff2'),
+        url('TarzanaNarrow.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaNarrow';
+    src: url('TarzanaNarrowBold.woff2') format('woff2'),
+        url('TarzanaNarrowBold.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaNarrow';
+    src: url('TarzanaNarrowBoldItalic.woff2') format('woff2'),
+        url('TarzanaNarrowBoldItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaWide';
+    src: url('TarzanaWideBoldItalic.woff2') format('woff2'),
+        url('TarzanaWideBoldItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaWide';
+    src: url('TarzanaWideBold.woff2') format('woff2'),
+        url('TarzanaWideBold.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tarzana-Narrow';
+    src: url('Tarzana-Narrow.woff2') format('woff2'),
+        url('Tarzana-Narrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaWide';
+    src: url('TarzanaWide.woff2') format('woff2'),
+        url('TarzanaWide.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaWide';
+    src: url('TarzanaWideBoldItalic.woff2') format('woff2'),
+        url('TarzanaWideBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaWide';
+    src: url('TarzanaWideBold.woff2') format('woff2'),
+        url('TarzanaWideBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaNarrow';
+    src: url('TarzanaNarrowBoldItalic.woff2') format('woff2'),
+        url('TarzanaNarrowBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarzanaNarrow';
+    src: url('TarzanaNarrowItalic.woff2') format('woff2'),
+        url('TarzanaNarrowItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+

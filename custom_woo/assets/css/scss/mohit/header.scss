@@ -1,0 +1,268 @@
+header {
+    position: relative;
+
+    @media(max-width: 991.98px) {
+        padding: 20px 0;
+    }
+
+    .inner {
+        position: relative;
+        @include dFlex($h_align: space-between);
+
+        .logo {
+            position: relative;
+            padding: 20px 0;
+
+            img {
+                max-width: 200px;
+                max-height: 90px;
+                width: auto;
+                height: auto !important;
+
+                @media(max-width: 991.98px) {
+                    max-width: 180px;
+                }
+
+                @media(max-width: 767.98px) {
+                    max-width: 150px;
+                }
+
+                @media(max-width: 575.98px) {
+                    max-width: 120px;
+                }
+            }
+
+        }
+
+        .right {
+            position: relative;
+            @include dFlex();
+
+            @media(max-width: 991.98px) {
+                flex-direction: row-reverse;
+            }
+
+            .cart_btn_wrap {
+                position: relative;
+                margin-left: 40px;
+
+                @media(max-width: 991.98px) {
+                    margin-left: 0px;
+                    margin-right: 15px;
+                }
+
+                .cart_btn {
+                    position: relative;
+                    @include dFlex();
+                    background: transparent;
+                    border: none;
+                    @extend %fs_24;
+                    color: $forestGreen;
+
+                    i {
+                        position: relative;
+                        margin-right: 10px;
+                        line-height: 1;
+                    }
+
+                    .text {
+                        position: relative;
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .toggle-menu {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border: none;
+                background-color: $OliveGreen;
+                @include dFlex();
+                cursor: pointer;
+                display: none;
+
+                @media(max-width: 991.98px) {
+                    display: flex;
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 70%;
+                    height: 3px;
+                    background-color: $white;
+                    border-radius: 10px;
+                    transition: 0.5s;
+                }
+
+                &::before {
+                    transform: translateY(-10px);
+                    box-shadow: 0px 10px 0 0 $white;
+                    transition: transform 0.5s;
+                }
+
+                &::after {
+                    transform: translateY(10px);
+                }
+
+                &.active::before {
+                    transform: translateY(0px) rotate(-225deg);
+                    box-shadow: 0px 0px 0 0 $white;
+                }
+
+                &.active::after {
+                    transform: translateY(0px) rotate(45deg);
+                }
+            }
+        }
+
+        .navigationWrap {
+            position: relative;
+            border-right: 2px solid $offGreen;
+            padding-right: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            @media(max-width: 991.98px) {
+                display: none;
+            }
+
+            nav {
+                position: relative;
+
+                ul {
+                    position: relative;
+
+                    li {
+                        position: relative;
+                        cursor: pointer;
+
+                        .a-Wrap {
+                            position: relative;
+                            @include dFlex($h_align: space-between);
+
+                            .subMenuAngle {
+                                position: relative;
+                                width: 20px;
+                                height: 20px;
+                                @include dFlex();
+                                @extend %fs_16;
+                                margin-left: 5px;
+                                pointer-events: none;
+                                color: $forestGreen;
+
+                                i {
+                                    transition: 0.5s;
+                                }
+
+                                &.active i {
+                                    transform: rotate(180deg);
+                                }
+
+                                @media(max-width: 991.98px) {
+                                    width: 35px;
+                                    height: 35px;
+                                    pointer-events: all;
+                                    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+                                }
+                            }
+                        }
+
+                        a {
+                            position: relative;
+                            color: $forestGreen;
+                            @extend %fs_24;
+                            flex-grow: 1;
+                            padding-bottom: 5px;
+                            transition: 0.5s;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0;
+                                height: 2px;
+                                transition: 0.5s;
+                                background-color: $forestGreen;
+
+                                @media(max-width: 991.98px) {
+                                    height: 1px;
+                                }
+                            }
+
+                            &:hover::before {
+                                width: 100%;
+                            }
+                        }
+
+                        &:hover>.sub-menu {
+                            display: block;
+
+                            @media(max-width: 991.98px) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                >ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    >li {
+                        margin-left: 40px;
+
+                        @media(max-width: 991.98px) {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                .sub-menu {
+                    position: absolute;
+                    width: 200px;
+                    background-color: $white;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    z-index: 111;
+                    display: none;
+
+                    @media(max-width: 991.98px) {
+                        position: relative;
+                        width: 100%;
+                        padding: 5px 0;
+                    }
+
+                    li {
+                        a {
+                            @extend %fs_20;
+                            padding: 5px 15px;
+                        }
+                    }
+                }
+            }
+
+            &.desktop {
+                @media(max-width: 991.98px) {
+                    display: none;
+                }
+            }
+
+            &.mobile {
+                display: none;
+
+                @media(max-width: 991.98px) {
+                    width: 100%;
+                    border: none;
+                    padding: 20px;
+                    background-color: $white;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

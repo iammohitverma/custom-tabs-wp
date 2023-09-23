@@ -1,0 +1,297 @@
+footer {
+    position: relative;
+    background: $EEBE8D;
+
+    a,
+    p,
+    h4 {
+        color: $forestGreen;
+        @extend %fs_22;
+        font-family: $font_tarzana_narrow;
+    }
+
+    .widgettitle {
+        position: relative;
+        margin-bottom: 20px;
+        font-weight: 400;
+
+        @media(max-width: 1199.98px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .top {
+        position: relative;
+        padding: 100px 0 50px;
+
+        @media(max-width: 1399.98px) {
+            padding: 60px 0 30px;
+        }
+
+        @media(max-width: 991.98px) {
+            padding: 40px 0 10px;
+        }
+
+
+        .widget {
+            position: relative;
+            padding: 0 30px;
+
+            @media(max-width: 1399.98px) {
+                padding: 0 20px;
+            }
+
+            @media(max-width: 1199.98px) {
+                margin-bottom: 20px;
+            }
+
+            @media(max-width: 991.98px) {
+                padding: 0 10px;
+            }
+
+            .menu {
+                position: relative;
+
+                @media(max-width: 991.98px) {
+                    border-bottom: 1px solid rgba(47, 66, 32, 0.3);
+                }
+
+                li {
+                    position: relative;
+                    margin-bottom: 20px;
+
+                    @media(max-width: 767.98px) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            &.widget_email-subscribers-form {
+                position: relative;
+
+                .es_subscription_message {
+                    display: inline;
+                }
+
+                input {
+                    position: relative;
+                    padding: 10px;
+                    width: 100%;
+                    background: $FAEFDA;
+                    border: none;
+                    @extend %fs_18;
+                    outline: none;
+                    min-height: 55px;
+
+                    &::placeholder {
+                        color: $forestGreen;
+                    }
+                }
+
+                input[type="submit"] {
+                    background-color: $OliveGreen;
+                    color: $white;
+                    @extend %fs_22;
+                    background-image: url(/wp-content/uploads/2023/09/arrow_right.png);
+                    background-repeat: no-repeat;
+                    background-position-x: calc(100% - 30px);
+                    background-position-y: center;
+                    padding-right: 40px;
+                }
+
+                .es-form-field-container {
+                    position: relative;
+                    @include dFlex($h_align: flex-start, $v_align: flex-start, $wrap: nowrap);
+
+                    @media(max-width: 1199.98px) {
+                        flex-wrap: wrap;
+                    }
+
+                    .gjs-row {
+                        position: relative;
+                        width: calc(100% / 3);
+                        margin-right: 30px;
+
+                        @media(max-width: 1199.98px) {
+                            width: 100%;
+                        }
+                    }
+
+                    .gjs-cell {
+                        position: relative;
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            width: 20px;
+                            height: 100%;
+                            pointer-events: none;
+                        }
+                    }
+
+                    >.gjs-row:not(:last-child) .gjs-cell {
+                        margin-bottom: 10px;
+
+                        &::before {
+                            left: -20px;
+                            background: url(/wp-content/themes/CavesRoadOlives/assets/images/btn_left_shape_v2.png) no-repeat center right / contain;
+                        }
+
+                        &::after {
+                            right: -20px;
+                            background: url(/wp-content/themes/CavesRoadOlives/assets/images/btn_right_shape_v2.png) no-repeat center left / contain;
+                        }
+                    }
+
+                    >.gjs-row:last-child .gjs-cell {
+                        &::before {
+                            left: -20px;
+                            background: url(/wp-content/themes/CavesRoadOlives/assets/images/btn_left_shape_v2_dark.png) no-repeat center right / contain;
+                        }
+
+                        &::after {
+                            right: -18px;
+                            background: url(/wp-content/themes/CavesRoadOlives/assets/images/btn_right_shape_v2_dark.png) no-repeat center left / contain;
+                        }
+                    }
+                }
+            }
+
+            .contact_details {
+                position: relative;
+
+                a {
+                    position: relative;
+                    display: block;
+                    font-weight: 600;
+                    font-family: $font_kepler_std;
+                }
+
+                .phone {
+                    @extend %fs_54;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .contact_details_wrap {
+        position: relative;
+        @include dFlex($h_align: space-between);
+
+        .widget {
+            position: relative;
+            @include dFlex();
+
+            h4 {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .center {
+        position: relative;
+        padding: 50px 0;
+        border-top: 1px solid rgb(47 66 32 / 30%);
+        border-bottom: 1px solid rgb(47 66 32 / 30%);
+        text-align: center;
+
+        @media(max-width: 1199.98px) {
+            padding: 30px 0;
+        }
+
+        @media(max-width: 767.98px) {
+            padding: 15px 0;
+        }
+
+        img {
+            max-width: 100%;
+
+            @media(max-width: 1199.98px) {
+                width: 80%;
+            }
+        }
+
+    }
+
+    .bottom {
+        position: relative;
+        padding: 50px 0;
+
+        @media(max-width: 1199.98px) {
+            padding: 30px 0;
+        }
+
+        .copyright {
+            position: relative;
+            @include dFlex($h_align: space-between);
+
+            @media(max-width: 991.98px) {
+                justify-content: center;
+                text-align: center;
+            }
+
+            p {
+                @extend %fs_20;
+            }
+
+            ul {
+                position: relative;
+
+                li {
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 40px;
+
+                    @media(max-width: 991.98px) {
+                        margin: 0 10px;
+                    }
+
+                    a {
+                        position: relative;
+                        @extend %fs_20;
+                    }
+                }
+            }
+        }
+    }
+
+    .sci {
+        position: relative;
+
+        li {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        transition: 0.5s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            transition: 0.5s;
+            background-color: $forestGreen;
+
+            @media(max-width: 991.98px) {
+                height: 1px;
+            }
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+}

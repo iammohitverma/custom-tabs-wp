@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldExt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldExt.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldCnSubh.woff2') format('woff2'),
+        url('KeplerStd-SemiboldCnSubh.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldExtCapt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldExtCapt.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldExtItSubh.woff2') format('woff2'),
+        url('KeplerStd-SemiboldExtItSubh.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldExtItCapt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldExtItCapt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldExtDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldExtDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldExtIt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldExtIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldExtItDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldExtItDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldIt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldItSubh.woff2') format('woff2'),
+        url('KeplerStd-SemiboldItSubh.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScnIt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScnIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScnItCapt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScnItCapt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScnCapt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScnCapt.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldItDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldItDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScnDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScnDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldItCapt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldItCapt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScn.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScn.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScnItSubh.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScnItSubh.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScnItDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScnItDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldScnSubh.woff2') format('woff2'),
+        url('KeplerStd-SemiboldScnSubh.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldCapt.woff2') format('woff2'),
+        url('KeplerStd-SemiboldCapt.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldCnDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldCnDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldCnItSubh.woff2') format('woff2'),
+        url('KeplerStd-SemiboldCnItSubh.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldCnItDisp.woff2') format('woff2'),
+        url('KeplerStd-SemiboldCnItDisp.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-Semibold.woff2') format('woff2'),
+        url('KeplerStd-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kepler Std';
+    src: url('KeplerStd-SemiboldSubh.woff2') format('woff2'),
+        url('KeplerStd-SemiboldSubh.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
