@@ -1,0 +1,290 @@
+:root {
+    --primary: #599e49;
+    --semi-primary: #F0FFED;
+    --main-text: #222222;
+    --light: #737373;
+    --dark: #000000;
+    --white: #ffffff;
+    --grey: #e6e6e6;
+    --dark-grey: #212529;
+    --hdng-font: 'Belleza';
+    --rest-font: 'DM Sans';
+}
+
+
+/* for gradient 
+#2F861B 
+#8BB325*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--rest-font);
+}
+
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--main-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--main-text);
+    font-family: var(--hdng-font);
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--light);
+    line-height: 1.2;
+    font-family: var(--rest-font);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none!important;
+}
+
+::placeholder {
+    color: var(--light);
+}
+
+::-ms-input-placeholder {
+    color: var(--light);
+}
+
+:-ms-input-placeholder {
+    color: var(--light);
+}
+
+-webkit-::placeholder {
+    color: var(--light);
+}
+
+::placeholder {
+    color: var(--light);
+}
+
+
+/* Common CSS */
+
+.sec_main_hdng {
+    font-family: var(--hdng-font);
+    font-size: 40px;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.tm_btn {
+    background-color: var(--light);
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 16px;
+    text-transform: capitalize;
+    min-width: 150px;
+    text-align: center;
+    transition: 0.4s ease;
+    font-family: var(--hdng-font);
+}
+
+.tm_btn:hover {
+    background-color: var(--dark);
+}
+
+.tm_primary_btn {
+    background-color: var(--primary);
+}
+
+
+/* header CSS Start */
+
+.hello-bar {
+    background-color: var(--dark-grey);
+}
+
+.hello-bar .left {
+    display: flex;
+    align-items: center;
+}
+
+.hello-bar .left p {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.hello-bar .left p span {
+    margin-left: 10px;
+}
+
+.hello-bar .right ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.hello-bar .right ul li {
+    border-left: 1px solid rgb(255 255 255 / 30%)
+}
+
+.hello-bar .right ul li:last-child {
+    border-right: 1px solid rgb(255 255 255 / 30%)
+}
+
+.hello-bar .right ul li a {
+    padding: 15px 20px;
+    position: relative;
+}
+
+.hello-bar .right ul li svg {
+    z-index: 2;
+    position: relative;
+}
+
+.hello-bar .right ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: var(--primary);
+    transition: 0.5s cubic-bezier(0.23, -1.3, 0, 1.68);
+    z-index: 1;
+}
+
+.hello-bar .right ul li a:hover::before {
+    height: 100%;
+}
+
+
+/* header main  */
+
+header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.searchBox {
+    border: 1px solid var(--primary);
+    text-align: center;
+    padding: 12px 5px;
+    color: #737373;
+    font-size: 16px;
+    line-height: 1.2;
+    width: 400px;
+    max-width: 100%;
+    cursor: pointer;
+    background: #f9f9f9 url(../images/frontend/search-icon.svg) no-repeat 20px center / 15px;
+    height: 45px;
+    transition: 0.5 ease;
+}
+
+.searchBox.show-search {
+    background: none;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+}
+
+.hdr_btns ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gradient_btn {
+    color: var(--white);
+    background: rgb(47, 134, 27);
+    background: linear-gradient(114deg, rgba(47, 134, 27, 1) 0%, rgba(139, 179, 37, 1) 50%);
+    padding: 9px 15px;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2;
+    height: 45px;
+}
+
+.main_search_box {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 25px 15px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+
+.main_search_box.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.main_search_box form {
+    border: 1px solid var(--primary);
+    padding: 7px 15px;
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main_search_box form input,
+.main_search_box form select,
+.main_search_box form button {
+    border: 1px solid var(--grey);
+    background-color: #f9f9f9;
+    height: 35px;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: var(--light);
+}
+
+.main_search_box form input {
+    width: 40%;
+}
+
+.main_search_box form select,
+.main_search_box form input[type='date'] {
+    width: 23%;
+}
+
+.main_search_box form button,
+.main_search_box form input[type='submit'] {
+    width: 9%;
+    background-color: transparent;
+    border: 0;
+}
+
+
+/* header CSS End */

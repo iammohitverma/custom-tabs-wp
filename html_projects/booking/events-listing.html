@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags Start -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your page description here" />
+  <meta name="keywords" content="keyword1, keyword2, keyword3" />
+  <meta name="author" content="Your Name" />
+  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <meta property="og:title" content="Your Open Graph Title" />
+  <meta property="og:description" content="Your Open Graph Description" />
+  <meta property="og:image" content="https://example.com/image.jpg" />
+  <meta property="og:url" content="https://example.com/page" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:title" content="Your Twitter Title" />
+  <meta name="twitter:description" content="Your Twitter Description" />
+  <meta name="twitter:image" content="https://example.com/image.jpg" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <title>Book an Event</title>
+  <!-- Meta Tags End -->
+
+  <!-- CSS Links Start -->
+  <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/swiper/swiper.min.css" />
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+  <link rel="stylesheet" href="./assets/css/theme-style.css" />
+  <link rel="stylesheet" href="./assets/css/mohit.css" />
+  <!-- CSS Links Start -->
+</head>
+
+<body>
+  <!-- page_banner start -->
+  <section class="page_banner">
+    <div class="container">
+      <div class="page_heading">
+        <h1 class="fs_52">Explore Events Happening Near You</h1>
+      </div>
+    </div>
+  </section>
+  <!-- page_banner end -->
+
+  <!-- page_banner start -->
+  <section class="events_listing pt_100 pb_100">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="filter_sidebar">
+            <div class="filter_head">
+              <h3>Filter</h3>
+              <button class="clear_btn">Clear All</button>
+            </div>
+            <div class="filter_body">
+              <form>
+                <div class="field_wrap">
+                  <button class="filter_toggle_btn" type="button">
+                    <span class="text">Category</span>
+                    <i class="down_arrow"></i>
+                  </button>
+                  <div class="field_inner">
+                    <div class="inner">
+                      <div class="checkbox_wrap">
+                        <label class="check_wrap select_all">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Select All</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Business</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Educational</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Entertainment</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Health and Fitness</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Lifestyle and Exhibition</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Marathons</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Travel</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Sports</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Others</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field_wrap">
+                  <button class="filter_toggle_btn" type="button">
+                    <span class="text">Date Range</span>
+                    <i class="down_arrow"></i>
+                  </button>
+                  <div class="field_inner">
+                    <div class="inner">
+                      <div class="date_wrap">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label>From</label>
+                            <input type="date" name="" value="">
+                          </div>
+                          <div class="col-sm-6">
+                            <label>To</label>
+                            <input type="date" name="" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field_wrap">
+                  <button class="filter_toggle_btn" type="button">
+                    <span class="text">Venue</span>
+                    <i class="down_arrow"></i>
+                  </button>
+                  <div class="field_inner">
+                    <div class="inner">
+                      <div class="search_wrap">
+                        <input type="text" class="search_venue" name="" value="" placeholder="Search Venue">
+                      </div>
+                      <div class="checkbox_wrap all_venues">
+                        <label class="check_wrap select_all">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Select All</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Warehouse Cafe</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">TULUM-Jungle Roof</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Tamzaraa Kafe & Club</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Sukhna Lake</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Rock Garden</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">RD’s The 30th Parallel</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Garam Dharam Mohali</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Forest Hill Resort</span>
+                        </label>
+                        <label class="check_wrap">
+                          <input type="checkbox" name="" value="" />
+                          <span class="checkmark"></span>
+                          <span class="text">Cup & Kitaab</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- page_banner end -->
+
+  <!-- JS Links -->
+  <!-- <script src="./assets/js/jquery/jquery-3.6.0.min.js"></script> please don't use jQuery -->
+  <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/swiper/swiper_bundle.min.js"></script>
+  <script src="./assets/js/function.js"></script>
+
+  <script>
+    // set height dynamic functionality for fieldInner start
+    let filterInnerAll = document.querySelectorAll(".filter_sidebar .filter_body .field_inner .inner");
+    filterInnerAll.forEach((inner) => {
+      let fieldInnerHeight = inner.clientHeight;
+      inner.closest(".field_inner").style.setProperty("--fieldInnerHeight", fieldInnerHeight + "px");
+    });
+    // set height dynamic functionality for fieldInner end
+
+
+    // filter toggle fields functionality start
+    let filterToggleBtn = document.querySelectorAll(".filter_toggle_btn");
+    filterToggleBtn.forEach((btn) => {
+      btn.addEventListener("click", toggleOptions);
+    });
+    function toggleOptions(e) {
+      let currBtn = e.target;
+      let currFieldWrap = currBtn.closest(".field_wrap");
+      currFieldWrap.classList.toggle("active");
+    }
+    // filter toggle fields functionality end
+
+
+    // select all functionality for select all checkbox start
+    let selectAllCheckBoxes = document.querySelectorAll(".filter_sidebar .select_all input[type='checkbox']");
+    selectAllCheckBoxes.forEach((selectCheckbox) => {
+      selectCheckbox.addEventListener("change", onChangeSelect);
+    });
+    function onChangeSelect(e) {
+      let currCheckox = e.target;
+      let currCheckboxWrap = currCheckox.closest(".checkbox_wrap");
+      let allCurrCheckBoxes = currCheckboxWrap.querySelectorAll("input[type='checkbox']");
+      if (currCheckox.checked == true) {
+        selectAllCheckboxes(allCurrCheckBoxes);
+      } else {
+        deSelectAllCheckboxes(allCurrCheckBoxes);
+      }
+    }
+
+    function selectAllCheckboxes(checkBoxes) {
+      checkBoxes.forEach(checkBox => {
+        checkBox.checked = true;
+      });
+    }
+    function deSelectAllCheckboxes(checkBoxes) {
+      checkBoxes.forEach(checkBox => {
+        checkBox.checked = false;
+      });
+    }
+    // select all functionality for select all checkbox end
+
+
+    // Clear all Button functionality start
+    let filterSidebar = document.querySelector(".filter_sidebar");
+    let filterSidebarClearBtn = document.querySelector(".filter_sidebar .clear_btn");
+    filterSidebarClearBtn.addEventListener("click", clearFilterValues);
+    function clearFilterValues(e) {
+      let sidebarFilterCheckBoxes = filterSidebar.querySelectorAll("input[type='checkbox']");
+      deSelectAllCheckboxes(sidebarFilterCheckBoxes);
+      showVenuesCheckboxes(sidebarFilterCheckBoxes);
+      let sidebarFilterDateFields = filterSidebar.querySelectorAll("input[type='date']");
+      clearInputValues(sidebarFilterDateFields);
+      let sidebarFilterInputFields = filterSidebar.querySelectorAll("input[type='text']");
+      clearInputValues(sidebarFilterInputFields);
+    }
+    function clearInputValues(inputs) {
+      inputs.forEach(input => {
+        input.value = "";
+      });
+    }
+    function showVenuesCheckboxes(inputs) {
+      inputs.forEach(input => {
+        input.closest(".check_wrap").style.display = "flex";
+      });
+    }
+    // Clear all Button functionality end
+
+
+    // search field functionality start
+    let searchVenue = filterSidebar.querySelector(".search_venue");
+    let allVenuesFields = filterSidebar.querySelectorAll(".all_venues .check_wrap .text");
+    searchVenue.addEventListener("keyup", searchVenueFun);
+    function searchVenueFun(e) {
+      let currField = e.target;
+      let currFieldVal = currField.value;
+      let currValLowerCased = currFieldVal.toLowerCase();
+      if (!currValLowerCased) {
+        showVenuesCheckboxes(allVenuesFields);
+      } else {
+        allVenuesFields.forEach(venuefield => {
+          let venuefieldVal = venuefield.textContent;
+          let venuefieldValLowerCased = venuefieldVal.toLowerCase();
+          if (venuefieldValLowerCased.includes(currValLowerCased)) {
+            venuefield.closest(".check_wrap").style.display = "flex";
+          } else {
+            venuefield.closest(".check_wrap").style.display = "none";
+          }
+        });
+      }
+    }
+    // search field functionality end
+  </script>
+</body>
+
+</html>
