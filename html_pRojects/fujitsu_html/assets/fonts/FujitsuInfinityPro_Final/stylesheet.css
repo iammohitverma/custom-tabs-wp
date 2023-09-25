@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Fujitsu Infinity Pro';
+    src: url('FujitsuInfinityPro-ExtraBold.woff2') format('woff2'),
+        url('FujitsuInfinityPro-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fujitsu Infinity Pro';
+    src: url('FujitsuInfinityPro-Bold.woff2') format('woff2'),
+        url('FujitsuInfinityPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fujitsu Infinity Pro';
+    src: url('FujitsuInfinityPro-ExtraBold.woff2') format('woff2'),
+        url('FujitsuInfinityPro-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fujitsu Infinity Pro';
+    src: url('FujitsuInfinityPro-Bold.woff2') format('woff2'),
+        url('FujitsuInfinityPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fujitsu Infinity Pro';
+    src: url('FujitsuInfinityPro-Regular.woff2') format('woff2'),
+        url('FujitsuInfinityPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fujitsu Infinity Pro';
+    src: url('FujitsuInfinityPro-Regular.woff2') format('woff2'),
+        url('FujitsuInfinityPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
