@@ -16,3 +16,11 @@ $lname = $args['lname'];
 ?>
 <h1><?php echo $fname;?> <?php echo $lname;?></h1>
 // In code file end
+
+
+<!-- Another way -->
+
+<?php
+$attributes = $args['attributes'];
+$limit = $attributes['limit'];
+echo $limit;
