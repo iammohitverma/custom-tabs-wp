@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .animeCircle {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .animBox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="animeCircle"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+
+        for (let i = 0; i < 100; i++) {
+            const animDiv = document.createElement("div");
+            animDiv.classList.add("animBox");
+            document.querySelector(".animeCircle").appendChild(animDiv);
+        }
+
+        function randomValues() {
+            anime({
+                targets: '.animBox',
+                translateX: function () {
+                    return anime.random(-700, 700);
+                },
+                translateY: function () {
+                    return anime.random(-500, 500);
+                },
+                scale: function () {
+                    return anime.random(1, 3);
+                },
+                // easing: 'linear',
+                // easing: 'easeInOutQuad',
+                easing: 'easeInOutBack',
+                duration: 3000,
+                delay: anime.stagger(10),
+                complete: randomValues
+            });
+        }
+
+        randomValues();
+    </script>
+</body>
+
+</html>
